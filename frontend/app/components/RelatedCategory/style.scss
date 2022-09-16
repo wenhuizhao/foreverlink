@@ -1,0 +1,63 @@
+.relatedCetagoryList {
+  padding: 15px 0;
+
+  li {
+    a {
+      width: 100%;
+      justify-content: flex-start;
+      min-height: 50px;
+      border-radius: 0px;
+      padding-left: 60px;
+      text-transform: capitalize;
+      position: relative;
+      transition: all .4s ease-in-out 0s;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 3px solid #d7d7d7;
+        border-radius: 50%;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transition: all .4s ease-in-out 0s;
+        transform: translateY(-50%);
+      }
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        content: "";
+        background: #00c6d1;
+        background: -webkit-linear-gradient(left, #00a7d5, #00ded8);
+        background: -moz-linear-gradient(left, #00a7d5, #00ded8);
+        background: -o-linear-gradient(left, #00a7d5, #00ded8);
+        background: -ms-linear-gradient(left, #00a7d5, #00ded8);
+        background: -webkit-gradient(linear, left top, right top, from(#00a7d5), to(#00ded8));
+        background: linear-gradient(left, #00a7d5, #00ded8);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s ease-in-out 0s;
+      }
+
+      &:hover {
+        color: #fff;
+
+        &::before {
+          border-color: #fff;
+        }
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

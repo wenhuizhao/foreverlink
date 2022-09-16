@@ -1,0 +1,31 @@
+.tagsWrap {
+  border: 1px solid #ebebeb;
+}
+
+.tagsItems {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    a {
+      height: 35px;
+      border: 1px solid #ebebeb;
+      color: #666;
+      padding: 5px 15px;
+      border-radius: 0;
+      text-transform: capitalize;
+      font-size: 15px;
+
+      &:hover {
+        background: -webkit-linear-gradient(left, #00a7d5, #00ded8);
+        background: linear-gradient(left, #00a7d5, #00ded8);
+        color: #fff;
+        border-color: #00a7d5;
+      }
+    }
+  }
+}

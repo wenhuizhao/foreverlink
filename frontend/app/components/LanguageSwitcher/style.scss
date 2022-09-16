@@ -1,0 +1,50 @@
+@import '../../../docs/css/veriabls.scss';
+
+.LanguageSwitcher {
+  .languageSwitcher {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .languageSelectWrap {
+      display: flex;
+      align-items: center;
+
+      span {
+        &.countryName {
+          margin-left: 5px;
+          text-transform: uppercase;
+          color: $textColor;
+        }
+      }
+    }
+  }
+}
+
+#menu-lang {
+  div {
+    ul {
+      padding: 0;
+
+      li {
+        min-height: unset;
+        padding: 10px;
+
+        span {
+          width: 10px !important;
+
+          &.countryName {
+            margin-left: 5px;
+            font-size: 14px;
+            color: $textColor;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

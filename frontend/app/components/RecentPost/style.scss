@@ -1,0 +1,64 @@
+@import '../../../docs/css/veriabls.scss';
+
+.recentPost {
+  border: 1px solid #ebebeb;
+  margin-bottom: 40px;
+}
+
+.recentPostList {
+  padding: 30px;
+
+  li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    a {
+      overflow: hidden;
+      display: block;
+
+      .postImg {
+        float: left;
+        margin-right: 15px;
+
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+        }
+      }
+
+      .postContent {
+        overflow: hidden;
+
+        p {
+          font-size: 15px;
+          transition: all .4s ease-in-out 0s;
+          font-weight: 600;
+          color: $headingColor;
+          margin-bottom: 5px;
+        }
+
+        span {
+          display: block;
+          font-size: 13px;
+          color: #999;
+        }
+      }
+
+      &:hover {
+        .postContent {
+          p {
+            color: $themePrimarCcolor;
+          }
+        }
+      }
+    }
+  }
+}

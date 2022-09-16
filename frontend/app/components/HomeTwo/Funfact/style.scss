@@ -1,0 +1,139 @@
+@import '../../../../docs/css/veriabls.scss';
+
+.funfactArea {
+  margin-top: -95px;
+  position: relative;
+  z-index: 11;
+
+  &.funfactAreaStyleTwo {
+    margin-top: 0;
+
+    .funfactWrap {
+      width: 100%;
+    }
+  }
+}
+
+.funfactWrap {
+  background: #fff;
+  box-shadow: 0px 5px 15px 0px rgba(68, 68, 68, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: auto;
+
+  @media (max-width:991px) {
+    width: 100%;
+  }
+
+  .funfactLeft {
+    width: 30%;
+    background: #fbfbfb;
+    border-right: 2px solid #c6f2f1;
+    overflow: hidden;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 50px;
+    position: relative;
+
+    @media (max-width:991px) {
+      width: 100%;
+      border-right: none;
+    }
+
+    i {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::before {
+        font-size: 50px;
+        color: $themePrimarCcolor;
+        line-height: 50px;
+      }
+    }
+
+    .contentFanfact {
+      padding-left: 70px;
+      position: relative;
+
+      span {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        color: $themePrimarCcolor;
+        font-size: 22px;
+        font-weight: 600;
+
+        @media (max-width:767px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .funfactItems {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    min-height: 100%;
+    align-items: center;
+    padding: 20px 0px;
+
+    @media (max-width:991px) {
+      width: 100%;
+      padding: 50px 0;
+    }
+
+
+    @media (max-width:767px) {
+      padding-bottom: 20px;
+    }
+
+    .funfactItem {
+      width: 33.33%;
+      text-align: center;
+      position: relative;
+
+      @media (max-width:767px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      &::before {
+        content: "";
+        background: #dddddd;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -5px;
+
+        @media (max-width:767px) {
+          display: none;
+        }
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 600;
+        color: $themePrimarCcolor;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

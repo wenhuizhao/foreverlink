@@ -1,0 +1,115 @@
+@import '../../../docs/css/veriabls.scss';
+
+.aboutArea {
+  padding: 84px 0px 68px;
+}
+
+.aboutContent {
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
+
+    span {
+      color: $themePrimarCcolor;
+    }
+
+    &:before {
+      content: "";
+      background: #00c6d1;
+      background: -webkit-linear-gradient(left, #00a7d5, #00ded8);
+      background: linear-gradient(right, #00a7d5, #00ded8);
+      width: 60px;
+      height: 3px;
+      position: absolute;
+      left: -72px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (max-width:1279px) {
+        display: none;
+      }
+    }
+  }
+
+  p {}
+
+  ul {
+    margin-top: 30px;
+
+    li {
+      padding-left: 20px;
+      position: relative;
+      margin-top: 15px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &::before {
+        content: "";
+        background: #bbb;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.aboutImg {
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: "";
+    opacity: .15;
+  }
+
+  button {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, .8);
+    font-size: 24px;
+    border-radius: 50%;
+    color: $themePrimarCcolor;
+    animation: pulse 2s infinite;
+    transition: all .4s ease-in-out 0s;
+
+    &:hover {
+      background: $themePrimarCcolor;
+      color: #fff;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .3);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .3);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}

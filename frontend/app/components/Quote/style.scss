@@ -1,0 +1,45 @@
+.quoteWrap {
+  margin-bottom: 40px;
+
+  .quote {
+    background-color: #f5f5f5;
+    padding: 30px;
+    margin-bottom: 20px;
+
+    i {
+      &::before {
+        font-size: 35px;
+        line-height: 35px;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 15px;
+    }
+  }
+
+  .quoter {
+    overflow: hidden;
+
+    .quoterImg {
+      float: left;
+      margin-right: 20px;
+
+      img {
+        padding: 5px;
+        border: 1px solid #dcdcdc;
+        border-radius: 50%;
+      }
+    }
+
+    .quoterContent {
+      overflow: hidden;
+      margin-top: 20px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

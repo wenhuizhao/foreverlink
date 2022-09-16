@@ -1,0 +1,105 @@
+.heroSliderArea {
+  position: relative;
+
+  .heroContentTwo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 111;
+
+    @media (max-width:991px) {
+      width: 80%;
+    }
+
+    @media (max-width:767px) {
+      width: 100%;
+    }
+
+    .heroForm {
+      &::before {
+        background: #fff;
+      }
+    }
+
+    h2 {
+      color: #fff;
+
+      span {
+        color: #fff;
+      }
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+
+  .heroSlider {
+    min-height: 800px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width:767px) {
+      min-height: 600px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      content: "";
+      z-index: -1;
+      opacity: .3;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: rgba(255, 255, 255, 0.3);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -30px;
+    text-align: center;
+    border-radius: 60px;
+    transition: all .4s ease-in-out 0s;
+
+    @media (max-width:767px) {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .swiper-button-prev {
+    &::after {
+      font-family: "themify";
+      content: "\e629";
+      font-size: 20px;
+      color: #fff;
+      background: unset;
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      font-family: "themify";
+      content: "\e628";
+      font-size: 20px;
+      color: #fff;
+      background: unset;
+    }
+  }
+
+}
+
+.blogSlidebar {
+  padding-left: 30px;
+}
+

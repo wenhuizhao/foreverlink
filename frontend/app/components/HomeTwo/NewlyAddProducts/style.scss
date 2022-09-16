@@ -1,0 +1,94 @@
+@import "../../../../docs/css/veriabls.scss";
+
+.homeTwoNewProductSlider {
+  .newProductWrap {
+    .newProductItem {
+      box-shadow: 0px 5px 15px 0px rgba(68, 68, 68, 0.2);
+      border-radius: 0px;
+      padding: 10px;
+
+      img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.homeTwoNewProductSlider {
+  .slick-list {
+    margin: -16px;
+  }
+
+  div {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(138, 138, 138, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.4s ease-in-out 0s;
+
+    @media (max-width:1279px) {
+      width: 45px;
+      height: 45px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      background: linear-gradient(to bottom, #00ded8, #00a7d5);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transition: all 0.4s ease-in-out 0s;
+      opacity: 0;
+    }
+
+    &::before {
+      color: $headingColor;
+      font-family: "themify";
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    &:hover {
+      &::before {
+        color: #fff;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &.slick-next {
+      right: -80px;
+      content: "\e649";
+
+      @media (max-width:1279px) {
+        right: -15px;
+      }
+    }
+
+    &.slick-prev {
+      left: -80px;
+      content: "\e648";
+
+      @media (max-width:1279px) {
+        left: -15px;
+      }
+    }
+  }
+}

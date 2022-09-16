@@ -1,0 +1,37 @@
+@import "../../../../docs/css/veriabls.scss";
+
+.heroStyleTwo {
+  min-height: 900px;
+  background: #fcfaf8;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  position: relative;
+
+  @media (max-width:991px) {
+    min-height: 690px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &::before {
+    left: 0;
+
+    @media (max-width:767px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    right: 0;
+
+    @media (max-width:767px) {
+      display: none;
+    }
+  }
+}

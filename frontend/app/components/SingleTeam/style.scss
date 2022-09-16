@@ -1,0 +1,33 @@
+@import '../../../docs/css/veriabls.scss';
+
+.singleTeamWrap {
+  text-align: center;
+
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+  }
+
+  ul {
+    margin-top: 10px;
+
+    li {
+      display: inline-block;
+      margin: 0px 8px;
+
+      a {
+        color: #999;
+
+        &:hover {
+          color: $themePrimarCcolor;
+        }
+      }
+    }
+  }
+}

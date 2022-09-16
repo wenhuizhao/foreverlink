@@ -1,0 +1,52 @@
+@import '../../../docs/css/veriabls.scss';
+
+.cetagoryWrap {
+  box-shadow: 0px 5px 15px 0px rgba(68, 68, 68, 0.1);
+  margin-bottom: 30px;
+
+  &.blogCategory {
+    box-shadow: none;
+    margin-bottom: 40px;
+    border: 1px solid #ebebeb;
+  }
+}
+
+.cetagoryList {
+  padding: 30px;
+
+  li {
+    margin-bottom: 12px;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px;
+      position: relative;
+
+      &:hover {
+        color: $themePrimarCcolor;
+
+        &::before {
+          background: $themePrimarCcolor;
+        }
+      }
+
+      &::before {
+        content: "";
+        background: #bbb;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .4s ease-in-out 0s;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

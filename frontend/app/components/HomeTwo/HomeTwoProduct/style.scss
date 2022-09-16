@@ -1,0 +1,33 @@
+@import "../../../../docs/css/veriabls.scss";
+
+.homeTwoProductTabs {
+  .productTabContainer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+      opacity: 1;
+      text-transform: unset;
+      font-size: 16px;
+      padding: 0;
+      min-width: unset;
+
+      &[aria-selected="true"] {
+        color: $headingColor;
+        font-weight: 600;
+      }
+
+      i {
+        margin-bottom: 0 !important;
+      }
+
+      @media (max-width:500px) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .productTabIndicator {
+    display: none;
+  }
+}
